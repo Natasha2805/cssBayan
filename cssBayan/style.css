@@ -1,0 +1,152 @@
+
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+	text-align: center;
+    color: blueviolet;
+}
+
+.accordion-icon {
+	width: 1.2rem;
+}
+
+.mem {
+	width: 30%;
+}
+
+.container {
+	width: 50%;
+	margin: 1.5rem auto;
+	background-color: #7e8284;
+}
+
+.input {
+	display: none;
+}
+.accordion-card_line {
+	display: flex;
+	justify-content: center;
+}
+
+span {
+	width: 90%;
+	border: .06rem solid rgb(243, 192, 192);
+	margin: 0.15rem 0;
+}
+
+.accordion-title {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 5.2rem;
+}
+.mem {
+	height: 0;
+	text-align: center;
+	transition: all 0.8s ease 0s;
+}
+
+.accordion-title_item {
+	color: rgb(43, 43, 96);
+	transition: all 0.3s ease 0s;
+}
+
+.accordion-img {
+	display: flex;
+	justify-content: center;
+}
+
+.accordion-icon {
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.input:checked~.label .mem{
+	height: auto;
+	margin: 1.8rem;
+	transition: .6s;
+}
+
+.input:checked~.label>.accordion-icon {
+	transform: rotate(90deg);
+	transition: .6s;
+}
+
+
+@media(hover:hover) {
+
+	.container:hover .accordion-icon{
+		opacity: 1;
+		transition: all 1s ease;
+	}
+
+	.container:hover .accordion-title_item {
+		color: #000;
+		transition: all 1s ease;
+	}
+
+	.label:hover .mem {
+		height: auto;
+		margin: 1.8rem;
+	}
+
+	.label:hover .accordion-icon {
+		transform: rotate(90deg);
+		transition: .7s;
+	}
+
+	.accordion-card:hover .accordion-icon {
+		transform: rotate(90deg);
+		transition: .7s;
+	}
+
+	.accordion-card:hover .mem {
+		height: auto;
+		margin: 2rem;
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	h1 {
+		font-size: 3rem;
+	}
+	.accordion-title {
+		margin: 0 1.8rem;
+	}
+
+	.accordion-title_item {
+		font-size: 1rem;
+	}
+	.accordion-card .label {
+		font-size: 1.1rem;
+	}
+
+	.mem {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	h1 {
+		font-size: 4rem;
+	}
+	.accordion-title {
+		margin: 0 1rem;
+	}
+	.accordion-title_item {
+		font-size: 1.5rem;
+	}
+	.label {
+		font-size: 0.9rem;
+	}
+
+	.mem {
+		width: 70%;
+	}
+}
